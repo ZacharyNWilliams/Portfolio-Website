@@ -1,0 +1,304 @@
+html, body{
+    padding: 0;
+    margin: 0%;
+}
+
+html{
+    height:100%;
+}
+body{
+    min-height: 100vh;
+    min-width: auto;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.4fr 1.9fr 0.2fr 0.6fr 0.1fr;
+    
+    text-align: center;
+    
+}
+/*Links*/
+a:link{
+    text-decoration: none!important;
+    
+}
+a:hover{
+    opacity: 0.4;
+    
+}
+/*navigation*/
+nav{
+    grid-area: nav;
+    
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    margin-top: 0;
+    height: 50px;
+    align-items: center;
+    background: black;
+    
+}
+
+.navbar a{
+    color: white;
+}
+
+/*intro*/
+#intro{
+    grid-area: intro;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: white;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.selfimage{
+    height: 11em;
+    margin-bottom: 0px;
+}
+.name{
+    font-size: 3rem;
+    height: fit-content;
+    padding-left: 2rem;
+    width: fit-content;
+}
+/*main*/
+main{
+    grid-area: main;
+    height: 25em;
+    
+}
+
+.servicestitle{
+    color: #a23023;
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+}
+.paragraphsandtitles{
+    color: aliceblue;
+    
+}
+.webdevelopment{
+    float: left;
+    width: 25%;
+    margin-left: 180px;
+    margin-right: 10px;
+    text-align: center;
+    
+}
+.webdevtitle{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+.digitalmarketing{
+    float: right;
+    width: 25%;
+    margin-right: 180px;
+    text-align: center;
+    display: block;
+    
+}
+.digitalmarketingtitle{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+#services{
+    background-image: url(services-bg.jpg);
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    float: right;
+    margin-bottom: 5%;
+}
+
+
+#content1{
+    grid-area: wia;
+}
+
+
+
+/*Who I am*/
+.whoiamtitle{
+    text-align: left;
+    margin-left: 4.8em;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: black;
+    font-size: 2em;
+}
+#whoiam{
+    color: black;
+    background-color: #a23023;
+    height: 100%;
+    
+    
+}
+.allparagraphs{
+    text-align: left;
+    width: 50em;
+    margin-top: 20px;
+    margin-left: 10em;
+    float: left;
+}
+.whoiam img{
+    
+    width: 10em;
+    height: 0 auto;
+    padding-bottom: 60px;
+}
+
+.whoiamparagraph3{
+    margin-top: 10px;
+}
+.logo{
+    display: flex;
+    float: left;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+
+/*My work*/
+#content2{
+    grid-area: mw;
+}
+#content2 {
+    background-color: #303030;
+    padding-bottom: 25px;
+    height: 100%;
+}
+.myworktitle{
+    font-size: 3em;
+    color: white;
+    
+}
+.myworksubtitle{
+    color: #a23023;
+}
+
+
+/*footer*/
+footer{
+    grid-area: f;
+    background-color: black;
+    padding: 25px 25px;
+}
+.social-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0
+}
+.footer__link{
+    text-decoration: none;
+    color:  #a23023;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+.social-list__link{
+    list-style:  none;
+    color: #a23023;
+    display: block;
+    padding: 0 5px;
+    
+}
+.social-list__item {
+    margin: 0.5em;
+    font-size: 1.3em;
+}
+
+
+/* responsive */
+
+
+@media only screen and (max-width:3000px){
+    .container{
+        grid-template-columns: 1fr;
+    
+        grid-template-areas: 
+        "nav"
+        "intro"
+        "main"
+        "wia"
+        "mw"
+        "f" ;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #intro{
+        display:block;
+        margin: 0 auto;
+    }
+    #intro img{
+        height: 20em;
+    }
+    #intro h1{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 900px ){
+    #services div{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+        
+    }
+    #services h2{
+        margin-bottom: 0;
+}
+
+}
+
+
+@media screen and (max-width:1200px){
+    #whoiam div {
+        
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .allparagraphs div{
+        width: 100%;
+        height: 100%;
+    }
+        #whoiam div{
+            
+            margin: 10px;
+            width: 95%;
+            text-align: center;
+    }
+        
+        #whoiam .whoiamtitle{
+           display: flex;
+           ;
+           
+           
+        }
+        #whoiam img{
+            display: none;
+        }
+}
